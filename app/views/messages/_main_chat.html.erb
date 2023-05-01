@@ -12,8 +12,16 @@
 </div>
 
 
+
 <div class="messages">
   <%= render partial: 'message', collection: @messages %>
+</div>
+
+<div class="form">
+  <div class="form-input">
+    <input class="form-message" placeholder= "type a message">
+  </div>
+  <input class="form-submit" type="submit" value="送信">
 </div>
 
 <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
